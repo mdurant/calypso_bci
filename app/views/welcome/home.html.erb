@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+  <%= render "home/dashboard" %>
+<% else %>
+<%= render "home/slider" %>
+<div class="container top-contenido">
+  <%= render "welcome/adicional" %>
+    <div class="row text-center">
+
+</div>
+<% end %>
+
+  <div class="container">
+    <% if user_signed_in? %>
+      
+    <% else %>
+    <%= render "layouts/menu_sin_login" %>
+    <% end %>
+  </div>

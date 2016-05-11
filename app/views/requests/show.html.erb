@@ -1,0 +1,63 @@
+<%= render "layouts/menu_sin_login" %>
+<%= render "home/slider" %>
+<div class="container top-body">
+  <div class="row ">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+        <% elsif alert %>  
+          <p class="alert"><%= alert %></p>
+        <% end %>
+        <h3>Generado el: <%= @request.created_at.strftime("%d-%m-%Y  %l:%M:%S %P") %> </h3>
+        
+              <p>
+        <strong>Titulo:</strong>
+        <%= @request.title %>
+      </p>
+      
+      <p>
+        <strong>Area Negocio:</strong>
+        <%= @request.area_id %>
+      </p>
+      
+      <p>
+        <strong>Usuario:</strong>
+        <%= @request.usuario %>
+      </p>
+      
+      <p>
+        <strong>Detalle:</strong>
+        <%= @request.description %>
+      </p>
+      
+      <p>
+        <strong>Fecha Reporte:</strong>
+        <%= @request.date_request %>
+      </p>
+      
+      <p>
+        <strong>Apoyo Fotográfico:</strong>
+
+        <br>
+        <%=  image_tag @request.image.url().to_s, class: "foto-reporte img-responsive" %>
+      </p>
+      </div>
+    </div>
+  </div>
+  <p id="notice"><%= notice %></p>
+  <div class="row pull-right">
+    <div class="col-md-12">
+      <%= link_to 'Editar Registro', edit_request_path(@request), class: "btn btn-warning" %> |
+      <%= link_to '<< Volver', new_request_path, class: "btn btn-primary" %>
+      <!-- aca el volver se cambia al index de requerimiento de Incidencias -->
+    </div>
+  </div>
+  
+</div>
+
+      
+      
+
+      
+      

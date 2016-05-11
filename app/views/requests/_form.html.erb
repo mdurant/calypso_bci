@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <%= form_for(@request) do |f| %>
+         <% if @request.errors.any? %>
+         <div id="error_explanation">
+           <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
+           <ul>
+              <% @request.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+           </ul>
+      </div>
+      <% end %>
+      <div class="form-group">
+    <%= f.label :title, "Titulo" %><br>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :area_id %><br>
+    <%= f.collection_select :area_id, Area.all, :id, :title, {}, {class: "form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :usuario, "Usuario que informa" %><br>
+    <%= f.text_field :usuario, class: "form-control", placeholder: "Mauricio Durán T." %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, "Descripción / Detalle" %><br>
+    <%= f.text_area :description, class: "form-control", placeholder: "Se reporta problema al procesar archivo por lotes ..." %>
+  </div>
+  <div class="form-group">
+    <%= f.label :date_request,"Fecha Incidencia" %><br>
+    <%= f.date_select :date_request, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image, "Imagen de apoyo (formatos: png, jpg, gif)" %><br>
+    <%= f.file_field :image , class: "form-control"%>
+  </div>
+  <div class="actions form-group">
+    <%= f.submit "Generar Requerimiento", class: "btn btn-primary pull-right" %>
+  </div>
+<% end %>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  

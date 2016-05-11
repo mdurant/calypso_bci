@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <%= form_for(@hito) do |f| %>
+          <% if @hito.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@hito.errors.count, "error") %> prohibited this hito from being saved:</h2>
+              <ul>
+              <% @hito.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+        <div class="form-group">
+          <%= f.label :Titulo %><br>
+          <%= f.text_field :title, class:"form-control title_bold" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :Negocio %><br>
+          <%= f.collection_select :area_id, Area.all, :id, :title, {}, {class: "form-control"} %>
+        </div>
+        <div class="form-group">
+          <%= f.label "Titulo Evento" %><br>
+          <%= f.text_field :title_evento, class: "form-control title_bold" %>
+        </div>
+        <div class="form-group">
+          <%= f.label "Descripción Evento" %><br>
+          <%= f.text_area :description_evento, class: "form-control" %>
+        </div>
+        
+        <div class="form-group form-inline">
+          <%= f.label :Desde %>  <i class="fa fa-calendar" aria-hidden="true"></i><br>
+          <div class="row">
+            <div class="col-md-8">
+              <%= f.date_select :date_from, {:start_year => Date.current.year, :end_year => 2020}, {class: "form-control"} %>
+            </div>
+          </div>
+        </div>
+           <div class="form-group form-inline">
+          <%= f.label :Hasta %>  <i class="fa fa-calendar" aria-hidden="true"></i><br>
+          <div class="row">
+            <div class="col-md-8">
+              <%= f.date_select :date_end, {:start_year => Date.current.year, :end_year => 2020}, {class: "form-control"} %>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :beneficio %><br>
+          <%= f.text_area :benefit, class:"form-control" %>
+        </div>
+        <div class="form-group" style="display:none;">
+          <%= f.label :id_user %><br>
+          <%= f.text_field :id_user, class:"form-control", disabled: "true" %>
+        </div>
+        <div class="row pull-right">
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.submit 'Ingresar Datos', class: "btn btn-success" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

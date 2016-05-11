@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+  <%= render "home/dashboard" %>
+<% else %>
+<%= render "layouts/menu_sin_login" %>
+<%= render "home/slider" %>
+<% end %>
+<div class="container top-contenido">
+    <div class="row">
+        <div class="col-md-4">
+          <h1 style="padding-top:30px;">Hitos de la Fabrica</h1>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class"col-md-4">
+          <%= image_tag("amarillo.jpg", class: "mono-amarillo img-responsive") %>
+        </div>
+    </div>
+  <hr>
+       <%= render "hitos/vistahitos" %>
+</div>
+

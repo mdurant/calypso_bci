@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  id_area: 1
+  date_from: 2016-05-01
+  date_end: 2016-05-01
+  benefit: MyText
+  id_user: 1
+
+two:
+  title: MyString
+  id_area: 1
+  date_from: 2016-05-01
+  date_end: 2016-05-01
+  benefit: MyText
+  id_user: 1

@@ -1,0 +1,55 @@
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><%= image_tag("logo-cib.png", class:"foto-logo animated infinite flash", id:"logo-animado") %></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+          <li class="active"><a href="#"><i class="fa fa-flag-o"></i> Home</a></li>
+          <li><a href="<%= hitos_search_path %>"><i class="fa fa-cogs"></i> Hitos</a></li>
+          <li><a href="#" ><i class="fa fa-book"></i> Proyectos</a></li>
+          <li><a href="<%= new_request_path %>"><i class="fa fa-bullhorn"></i> Contingencia</a></li>
+          <li><a href="#"><i class="fa fa-road"></i> Noticias</a></li>
+          <li><a href="#"><i class="fa fa-steam-square"></i> Equipo</a></li>
+          <li><a href="#"><i class="fa fa-bug"></i> Equipo</a></li>
+        <% else %>
+          <li class="active"><a href="<%= welcome_home_path %>">Home</a></li>
+          <li><a href="<%= search_hitos_path %>">Hitos</a></li>
+          <li><a href="<%= welcome_proyectos_path %>">Proyectos</a></li>
+          <li><a href="<%= new_request_path %>">Contingencia</a></li>
+          <li><a href="<%= welcome_noticias_path %>">Noticias</a></li>
+          <li><a href="<%= welcome_equipo_path %>">Equipo</a></li>
+        <% end %>
+      </ul>
+          <ul class="nav navbar-nav navbar-right">
+           <% if user_signed_in? %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" 
+                data-toggle="dropdown" role="button" 
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i> Hola: <%= current_user.username %> <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<%= edit_user_registration_path %>">Ver Perfil</a></li>
+                <li><a href="#">Datos Personales</a></li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <%= link_to "Terminar Sesion", destroy_user_session_path, method:"delete" %>
+                </li>
+              </ul>
+            </li>
+            <% else %>
+            <li>
+              <%= link_to "Administrar",new_user_session_path, target: "_blank" %>
+            </li>
+          <% end %>
+          </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+    </nav>
