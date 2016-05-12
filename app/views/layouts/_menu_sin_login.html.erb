@@ -36,6 +36,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-user"></i> Hola: <%= current_user.username %> <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><%= image_tag(current_user.image.url, class:"foto-user-small") %></li>
                 <li><a href="<%= edit_user_registration_path %>">Ver Perfil</a></li>
                 <li><a href="#">Datos Personales</a></li>
                 <li role="separator" class="divider"></li>

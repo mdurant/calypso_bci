@@ -178,3 +178,12 @@
   height: 190px;
   border-radius: 55%;
 }
+
+.foto-user-small{
+      width: 90px;
+    height: 90px;
+    position: static;
+    margin: 8px;
+    margin-left: 35px;
+    border-radius: 50%;
+}
