@@ -172,3 +172,9 @@
       padding-top: 7px;
     padding-right: 6px;
 }
+
+.foto-user{
+  width: 190px;
+  height: 190px;
+  border-radius: 55%;
+}

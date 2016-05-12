@@ -4,7 +4,7 @@ class ApplicationMailer < ActionMailer::Base
   
   def bienvenido_email(user)
   @user = user
-  @url  = 'http://codeHero.co'
-  mail(to: @user.email, subject: 'Aprende a programar con nuestros cursos gratis')
+  @url  = 'http://www.bci.cl/'
+  mail(to: @user.email, subject: 'Enviando información de la Fabrica Calypso')
 end
 end

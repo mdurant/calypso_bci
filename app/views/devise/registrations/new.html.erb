@@ -17,10 +17,11 @@
       </div>
       
       <div class="field">
-        <%= f.label "Fotografia" %><br />
-        <%= f.file_field :image %>
+        <%= f.label :image, "Fotografía" do %> <br>
+        <%= f.file_field :image  %>
         <%= f.hidden_field :image_cache %>
-        <%= image_tag(@hito.image) if @hito.image? %>
+        <% end %>
+        <% # = image_tag(@hito.image) if @hito.image? %>
       </div>
     
       <div class="field">
