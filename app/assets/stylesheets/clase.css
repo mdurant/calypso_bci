@@ -177,6 +177,12 @@
   width: 190px;
   height: 190px;
   border-radius: 55%;
+  margin: 5px;
+  padding: 5px;
+  margin-left: 152px;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  filter: sepia(100%);
 }
 
 .foto-user-small{
