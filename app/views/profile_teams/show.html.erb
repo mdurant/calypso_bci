@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile_team.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile_team.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @profile_team.phone %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @profile_team.celular %>
+</p>
+
+<p>
+  <strong>Anexo:</strong>
+  <%= @profile_team.anexo %>
+</p>
+
+<p>
+  <strong>Address work:</strong>
+  <%= @profile_team.address_work %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @profile_team.image %>
+</p>
+
+<%= link_to 'Edit', edit_profile_team_path(@profile_team) %> |
+<%= link_to 'Back', profile_teams_path %>

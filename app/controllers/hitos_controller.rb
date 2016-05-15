@@ -6,14 +6,15 @@ class HitosController < ApplicationController
   # GET /hitos.json
   def index
     @search = Hito.search(params[:q])
-    @Hitos = @search.result
-  end
-
-  def search
-    index
-    render :index
+    @hitos = @search.result
   end
   
+  def search
+    
+   # render json: @search
+    #index
+    #render :index
+  end
   
   #def set_search
   #  @q=Hito.search(params[:q])

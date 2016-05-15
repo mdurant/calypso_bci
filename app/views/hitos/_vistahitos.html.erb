@@ -4,10 +4,10 @@
       <%= search_form_for @search, url: search_hitos_path, html: {class: "form-inline", method: :post} do |f| %>
         <div class="input-daterange">
           <div class="col-md-4">
-            <%= f.text_field :date_from, class: "form-control datepicker", placeholder: "Date >= to" %>
+            <%= f.text_field :date_from, class: "form-control datepicker", placeholder: "Desde" %>
           </div>
           <div class="col-md-4 col-md-offset-1">
-            <%= f.text_field :date_end, class: "form-control datepicker", placeholder: "Date <= to" %>
+            <%= f.text_field :date_end, class: "form-control datepicker", placeholder: "Hasta" %>
           </div>
         </div>
 
@@ -23,10 +23,10 @@
 <table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th>Área</th>
+      <th><%= sort_link @search, :area_id, "Negocio"%></th>
       <th>Evento</th>
       <th>Beneficios</th>
-      <th>Publicado</th>
+      <th><%= sort_link @search, :created_at, "Creado el"%></th>
     </tr>
   </thead>
   <tbody>
@@ -38,7 +38,7 @@
     <td><i class="fa fa-check"></i>  <%= hito.benefit %>
    
     </td>
-    <td><%= hito.created_at.strftime("%m/%d/%Y") %></td>
+    <td style="width:100px"><%= hito.created_at.strftime("%m/%d/%Y") %></td>
     </tr>
     <% end %>
     <% end %>

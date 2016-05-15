@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   resources :requests
   resources :categories
   resources :news
-  resources :hitos do
-    collection do
-    match 'search' => 'welcome#hitos', via: [:get, :post], as: :search
-    end
-  end
+  resources :hitos
+  #resources :hitos do
+  #  collection do
+  #  match 'search' => 'welcom#search', via: [:get, :post], as: :search
+  #  end
+  #end
   resources :areas
   #get 'home/index'
 
