@@ -1,13 +1,20 @@
-<p id="notice"><%= notice %></p>
+<%= render "home/slider"%>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Listing Areas</h1>
+<h1>Listado Areas</h1>
+<div class="row pull-right">
+  <div class="col-md-12">
+    <%= link_to '(+) Nueva Area', new_area_path, class: "btn btn-info" %>
+  </div>
+</div>
 
-<table>
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
+      <th>Titulo</th>
+      <th>Descripción</th>
+      <th colspan="3">Opciones</th>
     </tr>
   </thead>
 
@@ -16,9 +23,11 @@
       <tr>
         <td><%= area.title %></td>
         <td><%= area.description %></td>
-        <td><%= link_to 'Show', area %></td>
-        <td><%= link_to 'Edit', edit_area_path(area) %></td>
-        <td><%= link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Ver', area, class: "btn btn-info" %>
+          <%= link_to 'Editar', edit_area_path(area) , class: "btn btn-warning"%>
+          <%= link_to 'Eliminar', area, method: :delete, data: { confirm: '¿Está seguro?' }, class:"btn btn-danger" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +35,5 @@
 
 <br>
 
-<%= link_to 'New Area', new_area_path %>
+</div>
+

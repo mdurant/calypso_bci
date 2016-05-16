@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
+  resources :deeds
   resources :profile_teams
   resources :requests
   resources :categories
   resources :news
-  resources :hitos
-  #resources :hitos do
-  #  collection do
-  #  match 'search' => 'welcom#search', via: [:get, :post], as: :search
-  #  end
-  #end
+  #resources :hitos
+  resources :hitos do
+    collection do
+    match 'search' => 'welcom#search', via: [:get, :post], as: :search
+    end
+  end
   resources :areas
   #get 'home/index'
 

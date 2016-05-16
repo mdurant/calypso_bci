@@ -1,5 +1,25 @@
+.top-navbar{
+  height: 90px;
+  background-color: #31343C;
+  border-bottom-width: 0px;
+}
+.top-navbar .container{
+  padding-top: 20px;
+}
+body{
+  padding-bottom: 0px;
+  /*
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 53%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(53%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 53%,rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 53%,rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 53%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 53%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 );
+  */
+}
 .top-body{
-  margin-top: 38px;
+  margin-top: 85px;
 }
 
 .login-box, .register-box {
@@ -19,12 +39,12 @@
 }
 
 #pie{
-  
+
     font-size: 11px;
     color: #F9F8F8;
     text-align: center;
     margin-bottom: 0px;
-    background-color: #777777;
+    background-color: #3C3C3C;
 }
 
 .top-admin{
@@ -82,9 +102,9 @@
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 0;    
+    margin: 0;
     padding: 35px 0;
-    text-align: center;  
+    text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   }
 
@@ -108,7 +128,7 @@
 
 .azul-title{
   color: #158cba;
-  
+
 }
 
 .fondo-form{
@@ -124,23 +144,23 @@
 
 
 .foto-logo{
-  width: 183px;
-  height: 47px;
-  margin-top: -13px;
-  
+    width: 250px;
+    height: 60px;
+    margin-top: -26px;
+    margin-left: -37px;
+
 }
 
-
 .flash {
-    -webkit-animation-name: flash !important;
-    animation-name: flash !important;
-    animation-duration: 5s !important;
-    animation-fill-mode: both !important;
+  -webkit-animation-name: flash !important;
+  animation-name: flash !important;
+  animation-duration: 5s !important;
+  animation-fill-mode: both !important;
 }
 
 
 .wrap_3 {
-    padding-bottom: 34px;
+  padding-bottom: 34px;
 }
 
 .header_1 {
@@ -155,22 +175,22 @@
     padding-bottom: 30px;
 }
 .text_3 {
-    font: 300 18px/24px 'Open Sans', sans-serif;
-    text-align: center;
+  font: 300 18px/24px 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 
 .foto-reporte{
-    border: 3px solid #eee;
-    border-radius: 4px;
-    width: 400px;
-    height: 300px;
+  border: 3px solid #eee;
+  border-radius: 4px;
+  width: 400px;
+  height: 300px;
 }
 
 
 .logo-footer{
-      padding-top: 7px;
-    padding-right: 6px;
+  padding-top: 7px;
+  padding-right: 6px;
 }
 
 .foto-user{
@@ -186,10 +206,28 @@
 }
 
 .foto-user-small{
-      width: 90px;
+    width: 90px;
     height: 90px;
     position: static;
     margin: 8px;
     margin-left: 35px;
     border-radius: 50%;
 }
+.navbar-default .navbar-nav>li>a {
+    color: #FBF7F7;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #33A1E6;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: transparent;
+    color: #ff4136;
+}
+
+.perfil-rojo{
+    width: 100px;
+    height: 90px;
+    border: 2px solid #eee;
+}
+

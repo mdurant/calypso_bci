@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top top-navbar">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -13,14 +13,14 @@
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
           <li class="active"><a href="#"><i class="fa fa-flag-o"></i> Home</a></li>
-          <li><a href="<%= hitos_path %>"><i class="fa fa-cogs"></i> Hitos</a></li>
+          <li><a href="<%= deeds_path %>"><i class="fa fa-cogs"></i> Hitos</a></li>
           <li><a href="#" ><i class="fa fa-book"></i> Proyectos</a></li>
-          <li><a href="<%= new_request_path %>"><i class="fa fa-bullhorn"></i> Contingencia</a></li>
+          <li><a href="<%= requests_path %>"><i class="fa fa-bullhorn"></i> Contingencia</a></li>
           <li><a href="#"><i class="fa fa-road"></i> Noticias</a></li>
           <li><a href="#"><i class="fa fa-steam-square"></i> Equipo</a></li>
-          <li><a href="#"><i class="fa fa-bug"></i> Equipo</a></li>
+          <li><a href="<%= areas_path %>#"><i class="fa fa-bug"></i> Areas</a></li>
         <% else %>
-          <li><a href="<%= welcome_home_path %>">Home</a></li>
+          <li class="active"><a href="<%= welcome_home_path %>">Home</a></li>
           <li><a href="<%= welcome_hitos_path %>">Hitos</a></li>
           <li><a href="<%= welcome_proyectos_path %>">Proyectos</a></li>
           <li><a href="<%= new_request_path %>">Contingencia</a></li>
@@ -31,8 +31,8 @@
           <ul class="nav navbar-nav navbar-right">
            <% if user_signed_in? %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" 
-                data-toggle="dropdown" role="button" 
+              <a href="#" class="dropdown-toggle"
+                data-toggle="dropdown" role="button"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-user"></i> Hola: <%= current_user.username %> <span class="caret"></span></a>
               <ul class="dropdown-menu">

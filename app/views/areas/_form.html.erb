@@ -1,25 +1,43 @@
-<%= form_for(@area) do |f| %>
-  <% if @area.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@area.errors.count, "error") %> prohibited this area from being saved:</h2>
-
-      <ul>
-      <% @area.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<%= render "layouts/menu_sin_login"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well forndo-form">
+        <%= form_for(@area) do |f| %>
+          <% if @area.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@area.errors.count, "error") %> prohibited this area from being saved:</h2>
+            <ul>
+            <% @area.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        
+        <div class="form-group">
+          <%= f.label :title %><br>
+          <%= f.text_field :title, class:"form-control" %>
+        </div>
+        <div class="form-goup">
+          <%= f.label :description %><br>
+          <%= f.text_area :description,class:"form-control"  %>
+        </div>
+        <div class="row pull-right">
+          <div class="col-md-12">
+            <div class="actform-goupions">
+              <%= f.submit 'Ingresar Datos', class:"btn btn-info" %>
+            </div>    
+          </div>
+        </div>
+        
       <% end %>
-      </ul>
+      </div>
     </div>
-  <% end %>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+
+
+  
