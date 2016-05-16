@@ -1,0 +1,48 @@
+<%= render "layouts/menu_sin_login"%>
+<%= render "home/dashboard"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <% if notice %>
+         <p class="notice"><%= notice %></p>
+        <% elsif alert %>  
+         <p class="alert"><%= alert %></p>
+        <% end %>  
+        <h2>Se han ingresado los siguientes datos.</h2>
+        <p>
+          <strong>Titulo General:</strong>
+          <%= @deed.title %>
+        </p>
+          <p>
+          <strong>Negocio:</strong>
+          <%= @deed.area.title %>
+        </p>
+
+        <p>
+          <strong>Fecha Evento:</strong>
+          <%= @deed.date_deed.strftime("%m/%d/%Y") %>
+        </p>
+        
+        <p>
+          <strong>Titulo Evento:</strong>
+          <%= @deed.title_evento %>
+        </p>
+        
+        <p>
+          <strong>Detalle Evento:</strong>
+          <%= @deed.description_evento %>
+        </p>
+
+        <p>
+          <strong>Beneficios:</strong>
+          <%= @deed.benefit %>
+        </p>
+        
+        <%= link_to 'Editar', edit_deed_path(@deed), class: "btn btn-warning" %> |
+        <%= link_to '<< Volver', deeds_path , class: "btn btn-info"%>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -210,9 +210,15 @@ body{
     height: 90px;
     position: static;
     margin: 8px;
-    margin-left: 35px;
+    margin-left: 54px;
     border-radius: 50%;
 }
+.foto-user-head{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
 .navbar-default .navbar-nav>li>a {
     color: #FBF7F7;
 }

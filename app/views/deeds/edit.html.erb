@@ -1,0 +1,18 @@
+<%= render "layouts/menu_sin_login"%>
+<%= render "home/dashboard"%>
+<div class="container top-body">
+   <h1>Edición de Hitos</h1>  
+    <div class="row pull-right">
+      <div class="col-md-12">
+        <%= link_to '<< Volver', deeds_path, class:"btn btn-info" %>
+        <%= link_to 'Listado', @deed , class:"btn btn-primary"%>
+      </div>
+    </div>
+  <%= render 'form' %>
+</div>
+
+
+
+
+
+

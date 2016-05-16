@@ -1,0 +1,61 @@
+<%= render "layouts/menu_sin_login"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <%= form_for(@deed) do |f| %>
+          <% if @deed.errors.any? %>
+            <div id="error_explanation">
+            <h2><%= pluralize(@deed.errors.count, "error") %> prohibited this deed from being saved:</h2>
+            <ul>
+            <% @deed.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+          </div>
+          <% end %>
+        
+    <div class="form-group">
+      <%= f.label :title, "Titulo" %><br>
+      <%= f.text_field :title, class:"form-control title_bold", placeholder:"Incidencia Calypso" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :area_id, "Negocio" %><br>
+      <%= f.collection_select :area_id, Area.all, :id, :title, {}, {class:"form-control"}   %>
+    </div>
+    <div class="form-group">
+      <%= f.label :date_deed, "Fecha Reportada"%>  <i class="fa fa-calendar" aria-hidden="true"></i><br>
+      <%= f.text_field :date_deed, class: "form-control date-deed" , placeholder:"aaaa-mm-dd" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :title_evento, "Titulo Evento"%><br>
+      <%= f.text_field :title_evento, class: "form-control title_bold", placeholder:"Evento incidencia" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :description_evento, "Descripción Evento"%><br>
+      <%= f.text_area :description_evento, class: "form-control", placeholder:"Pequeña descripción técnica" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :benefit, "Beneficios" %><br>
+      <%= f.text_area :benefit, class: "form-control" , placeholder:"Beneficios o mejoras realizadas"%>
+    </div>
+    <div class="row pull-right">
+      <div class="col-md-12">
+        <div class="actions form-group">
+          <%= f.submit 'Ingresar Datos', class: "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ 
+
+  
+
+  
