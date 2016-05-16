@@ -1,4 +1,4 @@
-<%= render "home/slider"%>
+<%= render "home/dashboard"%>
 <div class="container">
   <p id="notice"><%= notice %></p>
 
@@ -8,8 +8,8 @@
     <%= link_to '(+) Nueva Area', new_area_path, class: "btn btn-info" %>
   </div>
 </div>
-
-<table class="table table-bordered table-hover">
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Titulo</th>
@@ -32,6 +32,8 @@
     <% end %>
   </tbody>
 </table>
+</div>
+
 
 <br>
 
