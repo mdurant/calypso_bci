@@ -5,7 +5,9 @@ class ProfileTeamsController < ApplicationController
   # GET /profile_teams
   # GET /profile_teams.json
   def index
-    @profile_teams = ProfileTeam.all
+    #@profile_teams = ProfileTeam.all
+    @profile_teams = ProfileTeam.paginate(:page => params[:page], :per_page => 5)
+
   end
 
   # GET /profile_teams/1

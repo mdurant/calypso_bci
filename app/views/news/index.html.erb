@@ -1,35 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing News</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Photo</th>
-      <th>Id user</th>
-      <th>Id category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @news.each do |news| %>
-      <tr>
-        <td><%= news.title %></td>
-        <td><%= news.description %></td>
-        <td><%= news.photo %></td>
-        <td><%= news.id_user %></td>
-        <td><%= news.id_category %></td>
-        <td><%= link_to 'Show', news %></td>
-        <td><%= link_to 'Edit', edit_news_path(news) %></td>
-        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New New', new_news_path %>
+<%= render "home/dashboard"%>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h1>Listado de Noticias</h1>
+  <div class= "row pull-right">
+    <div class="col-md-12">
+      <a href="<%= new_new_path %>" class="btn btn-info">(+) Nueva NOTICIA </a>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Categoria</th>
+          <th>Fotografía</th>
+          <th>Usuario</th>
+          <th colspan="3">Opciones</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @news.each do |news| %>
+          <tr>
+            <td><%= news.title %></td>
+            <td><%= news.id_category %></td>
+            <td><%= news.photo %></td>
+            <td><%= news.id_user %></td>
+            
+            <td>
+              <%= link_to 'Ver', news, class:"btn btn-info" %>
+              <%= link_to 'Editar', edit_news_path(news) , class: "btn btn-warning" %>
+              <%= link_to 'Eliminar', news, method: :delete, data: { confirm: 'Está seguro?' }, class:"btn btn-danger" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class ="row pull-right">
+    <div class="col-md-12">
+      <%= will_paginate @news, renderer: BootstrapPagination::Rails %>
+    </div>
+  </div>
+</div>

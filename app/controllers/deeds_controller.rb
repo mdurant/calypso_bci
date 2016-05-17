@@ -6,7 +6,9 @@ class DeedsController < ApplicationController
   # GET /deeds
   # GET /deeds.json
   def index
-    @deeds = Deed.all
+    #@deeds = Deed.all
+    @deeds = Deed.paginate(:page => params[:page], :per_page => 5)
+
   end
 
   # GET /deeds/1
