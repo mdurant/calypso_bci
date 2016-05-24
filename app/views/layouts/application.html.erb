@@ -34,15 +34,10 @@
     <% else %>
       <%= render "layouts/menu_login" %>
     <% end %>
-<%= yield %>
-<footer id="pie">
-  <p><%= image_tag("logo-footer.png", class:"logo-footer")%>
-  Fabrica Calypso de apoyo a la gestión y correcta información de los trabajos realizados como Equipo Calypso   -  C&B - BCI
-  </p>
-  <p>
-    Todos los derechos reservados: Corporación BCI
-  </p>
-  <p>Morande #239 piso 6 - Santiago de Chile</p>
-</footer>
+<div class="row">
+  <%= yield %>  
+</div>
+<%= render "layouts/footer" %>
+
 </body>
 </html>
