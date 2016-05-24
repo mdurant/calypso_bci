@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  resources :deeds
+  #resources :deeds
   resources :profile_teams
   resources :requests
   resources :categories
   resources :news
   #resources :hitos
-  resources :hitos do
+  resources :deeds do
     collection do
-    match 'search' => 'welcom#search', via: [:get, :post], as: :search
+    match 'search' => 'welcome#search', via: [:get, :post], as: :search
     end
   end
   resources :areas

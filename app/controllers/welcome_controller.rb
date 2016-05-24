@@ -1,10 +1,16 @@
 class WelcomeController < ApplicationController
   
   before_action :set_hito, only: [:show, :edit, :update, :destroy]
+  
 
   def hitos
-   @deeds = Deed.all
+    @deeds = Deed.all()
+    @deed_months = @deeds.group_by{| t | t.date_deed.beginning_of_month}
+    
+    #@deeds = Deed.find(:all, :conditions => ["date_deed between ? and ? ", :date_deed_one, :date_deed_two])
+  
   end
+  
   
   def noticias
   end
@@ -13,7 +19,13 @@ class WelcomeController < ApplicationController
   end
   
   def show
+    @deeds = Deed.all
   end
+  
+  def search
+  end
+
+  
   
   
 end

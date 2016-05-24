@@ -1,19 +1,30 @@
 class DeedsController < ApplicationController
   before_action :set_deed, only: [:show, :edit, :update, :destroy]
-  
   before_action :authenticate_user!
+
+  
 
   # GET /deeds
   # GET /deeds.json
   def index
-    #@deeds = Deed.all
-    @deeds = Deed.paginate(:page => params[:page], :per_page => 5)
-
+    @deeds = Deed.all
+    @deeds = Deed.find(:all, :conditions => ["date_deed between ? and ? ", :date_deed_one, :date_deed_two])
+    
   end
+  
 
+  private
+ # @articles = Article.find(:all,
+#:conditions => [ " created_at between ? and ? ",
+#:date_start, :date_end])
+#otra opcion
+#: where('created_at >= ? AND created_at <=?', :start, :end)
+  
+  
   # GET /deeds/1
   # GET /deeds/1.json
   def show
+     @deeds = Deed.all
   end
 
   # GET /deeds/new
