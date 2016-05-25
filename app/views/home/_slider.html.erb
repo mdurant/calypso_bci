@@ -6,23 +6,29 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
     <div class="carousel-inner" role="listbox">
-      <div class="item">
-        <%= image_tag("slide-1.jpg", class: "img-responsive") %>
+      <div class="item active">
+        <%= image_tag("banner1.jpg", class: "img-responsive") %>
         <div class="container">
           <div class="carousel-caption">
-            <h1>DESAFIOS CALYPSO</h1>
-            <p>En nuestra Fábrica estamos aportando a nuevas mejoras, funcionalidades y realizando un contínuo trabajo de continuidad para las areas de nuestra Corporación BCI.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">En Construcción</a></p>
+            <section id="destacado" class="frase-destacada">
+             <p>En nuestra Fábrica estamos aportando a nuevas mejoras, funcionalidades y realizando un contínuo trabajo de continuidad para las areas de nuestra Corporación BCI.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">En Construcción</a></p>   
+            </section>
+           
           </div>
         </div>
       </div>
-      <div class="item active">
-        <%= image_tag("slide2-bci.jpg", class: "img-responsive")%>
+      <div class="item">
+        <%= image_tag("banner2.jpg", class: "img-responsive")%>
         <div class="container">
           <div class="carousel-caption">
-            <h1>NUESTROS PROYECTOS.</h1>
-            <p>En la Fábrica, estamos constantemente apoyando y liderando proyectos. <h1>Entérate en qué estamos ahora...</h1></p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">En Construcción</a></p>
+            <section id="destacado" class="frase-destacada">
+              <p>En la Fábrica, estamos constantemente apoyando y liderando proyectos.</p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="#" role="button">En Construcción</a>
+              </p>  
+            </section>
+            
           </div>
         </div>
       </div>
@@ -30,19 +36,20 @@
         <%= image_tag("banner3.jpg", class: "img-responsive")%>
         <div class="container">
           <div class="carousel-caption">
-            <h1>INCIDENCIAS Y CONTINUIDAD</h1>
-            <p>La preocupación de Equipo, incidencias e imprevistos soportados por Fabrica Calypso</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">En Construcción</a></p>
+            <section id="destacado" class="frase-destacada">
+              <p>La preocupación de Equipo, incidencias e imprevistos soportados por Fabrica Calypso</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">En Construcción</a></p>  
+            </section>
           </div>
         </div>
       </div>
     </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Anterior</span>
       </a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Siguiente</span>
       </a>
     </div>

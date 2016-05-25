@@ -1,7 +1,7 @@
 
 .top-navbar{
   height: 90px;
-  background-color: #31343C;
+  background-color: transparent;
   border-bottom-width: 0px;
 }
 .top-navbar .container{
@@ -62,6 +62,25 @@ ul.menu-footer li {
 li{
   display: list-item;
   text-align: -webkit-match-parent;
+}
+
+.frase-destacada {
+  
+  font-size: 28px;
+  line-height: 140%;
+  color: #FFF;
+  width: 505px;
+  margin-bottom: 225px;
+  margin-left: 3em;
+}
+.carousel-caption p{
+  font-size: 28px;
+}
+#destacado {
+  max-width: 1010px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 68px;
 }
 
 .top-admin{
