@@ -262,7 +262,15 @@ li{
   border-radius: 50%;
 }
 
-.navbar-default .navbar-nav>li>a {
+.perfil-rojo{
+    width: 100px;
+    height: 90px;
+    border: 2px solid #eee;
+}
+
+/* menu superior */
+
+ .navbar-default .navbar-nav>li>a {
     color: #FBF7F7;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
@@ -273,10 +281,20 @@ li{
     background-color: transparent;
     color: #ff4136;
 }
-
-.perfil-rojo{
-    width: 100px;
-    height: 90px;
-    border: 2px solid #eee;
+.navbar-nav{
+  margin-left: 11%;
+}
+.navbar-nav li>a{
+  color: white;
 }
 
+.navbar-nav li>a:hover{
+  color: #fff;
+  background-color: #158CBA;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.navbar-default.affix {
+    background-color: white;
+    border-color: rgba(34, 34, 34, 0.05);
+}

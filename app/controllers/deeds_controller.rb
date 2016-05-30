@@ -8,7 +8,11 @@ class DeedsController < ApplicationController
   # GET /deeds.json
   def index
     @deeds = Deed.all
-    @deeds = Deed.find(:all, :conditions => ["date_deed between ? and ? ", :date_deed_one, :date_deed_two])
+    @deeds = Deed.paginate(:page => params[:page], :per_page => 10)
+
+    
+    
+    #@deeds = Deed.find(:all, :conditions => ["date_deed between ? and ? ", :date_deed_one, :date_deed_two])
     
   end
   

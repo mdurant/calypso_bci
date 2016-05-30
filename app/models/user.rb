@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable
 
   # Setup accessible (or protected) attributes for your model
  # attr_accessible :email, :password, :remember_me, :image, :image_cache, :remove_image
