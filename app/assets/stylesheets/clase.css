@@ -298,3 +298,15 @@ li{
     background-color: white;
     border-color: rgba(34, 34, 34, 0.05);
 }
+
+
+/* edit navbar*/
+
+.navbar-default{
+    background-color: #213244;
+    border: none;
+}
+
+.color2{
+  background-color:#213244;
+}
