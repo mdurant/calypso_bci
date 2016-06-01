@@ -10,20 +10,9 @@ class DeedsController < ApplicationController
     @deeds = Deed.all
     @deeds = Deed.paginate(:page => params[:page], :per_page => 10)
 
-    
-    
     #@deeds = Deed.find(:all, :conditions => ["date_deed between ? and ? ", :date_deed_one, :date_deed_two])
     
   end
-  
-
-  private
- # @articles = Article.find(:all,
-#:conditions => [ " created_at between ? and ? ",
-#:date_start, :date_end])
-#otra opcion
-#: where('created_at >= ? AND created_at <=?', :start, :end)
-  
   
   # GET /deeds/1
   # GET /deeds/1.json
@@ -82,6 +71,7 @@ class DeedsController < ApplicationController
     end
   end
 
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_deed

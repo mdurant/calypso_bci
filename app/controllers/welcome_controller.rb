@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   
 
   def hitos
-    @deeds = Deed.all()
+    @deeds = Deed.all
     @deed_months = @deeds.group_by{| t | t.date_deed.beginning_of_month}
     
     #@deeds = Deed.find(:all, :conditions => ["date_deed between ? and ? ", :date_deed_one, :date_deed_two])
@@ -17,6 +17,10 @@ class WelcomeController < ApplicationController
   
   def index
   end
+  
+  def new
+  end
+
   
   def show
     @deeds = Deed.all

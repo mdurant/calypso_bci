@@ -23,9 +23,13 @@
       <%= f.label :area_id, "Negocio" %><br>
       <%= f.collection_select :area_id, Area.all, :id, :title, {}, {class:"form-control"}   %>
     </div>
+
     <div class="form-group">
-      <%= f.label :date_deed, "Fecha Reportada"%>  <i class="fa fa-calendar" aria-hidden="true"></i><br>
-      <%= f.text_field :date_deed, class: "form-control date-deed" , placeholder:"aaaa-mm-dd" %>
+      <div class="input-group date">
+        <%= f.label :date_deed, "Fecha Reportada"%>  
+        <%= f.text_field :date_deed, class: "form-control" , placeholder:"aaaa-mm-dd", id:"datepicker1" %>
+      
+      </div>
     </div>
     <div class="form-group">
       <%= f.label :title_evento, "Titulo Evento"%><br>

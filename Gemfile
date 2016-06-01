@@ -36,6 +36,9 @@ gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 gem 'groupdate'
 
+#prueba
+gem 'yaml_db'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
