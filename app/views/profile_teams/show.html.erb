@@ -1,3 +1,20 @@
+<%= render "layouts/menu_sin_login"%>
+<%= render "home/dashboard"%>
+<div class="container">
+  <div class="row">
+    <div class ="col-md-6 col-md-offset-6">
+      <div class="well fondo-form">
+        <% if notice %>
+         <p class="notice"><%= notice %></p>
+        <% elsif alert %>  
+         <p class="alert"><%= alert %></p>
+        <% end %>  
+        <h2>Se han ingresado los siguientes datos.</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>

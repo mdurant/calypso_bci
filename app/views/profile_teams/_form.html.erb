@@ -1,45 +1,63 @@
-<%= form_for(@profile_team) do |f| %>
-  <% if @profile_team.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@profile_team.errors.count, "error") %> prohibited this profile_team from being saved:</h2>
-
-      <ul>
-      <% @profile_team.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+<%= render "layouts/menu_sin_login"%>
+<%= render "home/dashboard"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <%= form_for(@profile_team) do |f| %>
+          <% if @profile_team.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@profile_team.errors.count, "error") %> prohibited this profile_team from being saved:</h2>
+              <ul>
+              <% @profile_team.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+              </ul>
+            </div>
+        <% end %>
+        
+        <div class="form-group">
+    <%= f.label :name, 'Nombre' %><br>
+    <%= f.text_field :name, class:"form-control", placeholder:"Nombre Apellido" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class:"form-control", placeholder:"Correo Electrónico" %>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+  <div class="form-group">
+    <%= f.label :phone, 'Teléfono Directo' %><br>
+    <%= f.text_field :phone, class:"form-control title_ld", placeholder:"Teléfono Directo" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :celular %><br>
-    <%= f.text_field :celular %>
+    <%= f.text_field :celular, class:"form-control", placeholder:"Celular" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :anexo %><br>
-    <%= f.text_field :anexo %>
+    <%= f.text_field :anexo, class:"form-control", placeholder:"Cód. Anexo Directo" %>
   </div>
-  <div class="field">
-    <%= f.label :address_work %><br>
-    <%= f.text_field :address_work %>
+  <div class="form-group">
+    <%= f.label :address_work, 'Dirección Laboral' %><br>
+    <%= f.text_field :address_work, class:"form-control", placeholder:"Dirección Laboral" %>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+  <div class="form-group">
+    <%= f.label :image, 'Imagen (jpg,png,jpeg) ' %><br>
+    <%= f.file_field :image , class: "form-control"%>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row pull-right">
+    <div class="col-md-12">
+      <div class="actions form-group">
+        <%= f.submit 'Ingresar Datos', class: "btn btn-success" %>
+      </div>
+    </div>
   </div>
 <% end %>
+  
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+ 
