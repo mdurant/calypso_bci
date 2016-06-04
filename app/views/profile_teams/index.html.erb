@@ -6,8 +6,8 @@
     </div>
   </div>
 </div>
-<p id="notice"><%= notice %></p>
-<h1>Listado miembros Calypso</h1>
+<div class="container">
+  <h1>Listado miembros Calypso</h1>
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
     <thead>
@@ -32,7 +32,7 @@
           <td><%= profile_team.celular %></td>
           <td><%= profile_team.anexo %></td>
           <td><%= profile_team.address_work %></td>
-          <td><%= profile_team.image %></td>
+          <td><%= image_tag profile_team.image.url(:extra_thumb).to_s, class: "img-responsive" %></td>
           <td>
             <%= link_to 'Ver', profile_team, class:"btn btn-info" %>
             <%= link_to 'Editar', edit_profile_team_path(profile_team), class:"btn btn-warning" %>
@@ -42,7 +42,8 @@
       <% end %>
     </tbody>
 </table>
+  
 </div>
-<br>
+</div>
 
 

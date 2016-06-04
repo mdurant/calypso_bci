@@ -314,3 +314,10 @@ li{
 .input-group-addon{
   height: 15px;
 }
+
+.foto-profile{
+  width: 20%;
+  height: auto;
+  position: initial;
+  margin: 0 auto;
+}
