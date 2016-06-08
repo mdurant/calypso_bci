@@ -37,7 +37,7 @@ gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in developm
 gem 'groupdate'
 
 #prueba
-gem 'yaml_db'
+#gem 'yaml_db'
 
 
 # Use jquery as the JavaScript library
