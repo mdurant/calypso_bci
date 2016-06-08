@@ -39,19 +39,7 @@ ActiveRecord::Schema.define(version: 20160516104920) do
     t.string   "description_evento"
   end
 
-  create_table "hitos", force: :cascade do |t|
-    t.string   "title"
-    t.date     "date_from"
-    t.date     "date_end"
-    t.text     "benefit"
-    t.integer  "id_user"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "area_id"
-    t.string   "title_evento"
-    t.string   "description_evento"
-  end
-
+ 
   create_table "news", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
