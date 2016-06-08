@@ -1,6 +1,7 @@
 class DeedsController < ApplicationController
   before_action :set_deed, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  scope :ordenar_fecha, order("date_deed ASC")
 
   
 
@@ -18,6 +19,7 @@ class DeedsController < ApplicationController
   # GET /deeds/1.json
   def show
      @deeds = Deed.all
+     @deeds = Deed.ordenar_fecha
   end
 
   # GET /deeds/new

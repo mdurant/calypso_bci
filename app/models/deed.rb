@@ -5,6 +5,7 @@ class Deed < ActiveRecord::Base
     
     belongs_to :area, foreign_key: "area_id"
     belongs_to :user, foreign_key: "id_user"
+    default_scope -> { order(date_deed: :desc) }
     
 
   def publish_month
