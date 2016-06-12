@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+#Ignore file .ENV
+.env
+
+~/.gitignore_global
