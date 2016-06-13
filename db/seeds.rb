@@ -22,7 +22,18 @@ Area.create!([
     {id: 7, title: "Riesgo Financiero", description: "Riesgo Financiero", created_at: "2016-05-02 20:38:06", updated_at: "2016-05-02 20:38:06"},
     {id: 8, title: "Custodia", description: "Custodia", created_at: "2016-05-02 20:38:20", updated_at: "2016-05-02 20:38:20"},
     {id: 9, title: "Tesorería", description: "Tesorería", created_at: "2016-05-02 20:38:34", updated_at: "2016-05-02 20:38:34"},
-    {id: 10, title: "Back Office (Procesos)", description: "Back Office (Procesos)", created_at: "2016-05-03 15:29:30", updated_at: "2016-05-03 15:29:30"}
+    {id: 10, title: "Back Office (Procesos)", description: "Back Office (Procesos)", created_at: "2016-05-03 15:29:30", updated_at: "2016-05-03 15:29:30"},
+    {id: 11, title: "Front to Back (Mesa de Dinero)", description: "Front to Back (Mesa de Dinero)", created_at: "2016-05-03 15:32:38.748725", updated_at: "2016-05-03 15:32:38.748725"},
+    {id: 12, title: "Fábrica Funcional Calypso (Mesa de Dinero)", description: "Fábrica Funcional Calypso (Mesa de Dinero)", created_at: "2016-05-03 15:29:30", updated_at: "2016-05-03 15:29:30"},
+    {id: 13, title: "Back Office", description: "Back Office (Clientes MO)", created_at: "2016-05-03 15:29:30", updated_at: "2016-05-03 15:29:30"},
+    {id: 14, title: "Desarrollo CIB", description: "Desarrollo CIB", created_at: "2016-05-03 15:29:30", updated_at: "2016-05-03 15:29:30"}
     
 ])
+#
+ #Deed.create!([
+  #{id:1, title:"Ambiente FO", benefit:"Soluciona problema de Valoración de Swap. Rápida ejecución de los procesos.", id_user:"1", created_at:"2016-05-16 03:39:20.203623", updated_at:"2016-05-16 13:07:55.753566", area_id:"2", date_deed:"2015-04-01", title_evento:"Ambiente FO", description_evento:""},
+  #{id:2, title:"Cambio Pagos Fusion ITAU / Corpbanca", benefit:"Cumplimiento con normativa SWIT para realizar los pagos hacia Corpbanca de Emisor ITAU debido a fusión bancaria.", id_user:"1", created_at:"2016-05-16 13:08:36.898087", updated_at:"2016-05-16 13:08:36.898087", area_id:"11", date_deed:"2015-04-01", title_evento:"Cambio Pagos Fusion ITAU / Corpbanca", description_evento:""},
+  #{id:3, title:"Proyecto Normativo Divisas Pendientes", benefit:"Cumplimiento de proyecto normativo.", id_user:"1", created_at:"2016-05-16 13:10:14.165041", updated_at:"2016-05-16 13:10:14.165041", area_id:"10", date_deed:"2015-04-01", title_evento:"Proyecto Normativo Divisas Pendientes", description_evento:"Puesta en etapa Piloto de proyecto normativo."}
+  
+  #])
 

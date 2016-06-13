@@ -21,7 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  database: example_production
+  database: ENV["PG_DB"]
   adapter: postgresql
-  host: localhost
-  password:
+  host: ENV["PG_HOST"]
+  username: ENV["PG_USER"]
+  password: ENV["PG_PASSWORD"]
