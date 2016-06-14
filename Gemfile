@@ -9,6 +9,9 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  #Warning Heroku
+gem 'rails_12factor'
+
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -36,8 +39,7 @@ gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 gem 'groupdate'
 
-#Warning Heroku
-gem 'rails_12factor'
+
 
 #prueba
 #gem 'yaml_db'
