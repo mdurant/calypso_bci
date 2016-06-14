@@ -36,6 +36,9 @@ gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 gem 'groupdate'
 
+#Warning Heroku
+gem 'rails_12factor'
+
 #prueba
 #gem 'yaml_db'
 
