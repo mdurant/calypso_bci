@@ -14,13 +14,14 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
 
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'Fabrica Calypso - BCI',
-    user_name:            'mauriciodurant@gmail.com',
-    password:             'Natatus1q2w',
+    domain:               ENV["MAIL_DOMAIN"],
+    user_name:            ENV["MAIL_USER"],
+    password:             ENV["MAIL_PASSWORD"],
     authentication:       'plain',
     enable_starttls_auto: true  }
   # Don't care if the mailer can't send.
