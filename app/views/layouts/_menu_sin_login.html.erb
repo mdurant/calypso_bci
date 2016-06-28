@@ -17,7 +17,7 @@
           <li><a href="#" ><i class="fa fa-book"></i> Proyectos</a></li>
           <li><a href="<%= requests_path %>"><i class="fa fa-bullhorn"></i> Contingencia</a></li>
           <li><a href="#"><i class="fa fa-road"></i> Noticias</a></li>
-          <li><a href="#"><i class="fa fa-steam-square"></i> Equipo</a></li>
+          <li><a href="<%= profile_teams_path %>"><i class="fa fa-steam-square"></i> Equipo</a></li>
           <li><a href="<%= areas_path %>#"><i class="fa fa-bug"></i> Areas</a></li>
         <% else %>
           <li class="active"><a href="<%= welcome_home_path %>">Home</a></li>
@@ -38,7 +38,7 @@
               <ul class="dropdown-menu color2">
                 <li><%= image_tag(current_user.image.url, class:"foto-user-small") %></li>
                 <li><a>Usuario: <b><%= current_user.username %></b></a></li>
-                <li><a>Email: <i class="fa fa-envelope-o" aria-hidden="true"></i>  <%= current_user.email %></a></li>
+                <li><a>Email: <i class="fa fa-envelope-o" aria-hidden="true"></i><%= current_user.email %></a></li>
                 <li><a href="#">Gestiones</a></li>
                 <li role="separator" class="divider"></li>
                 <li>

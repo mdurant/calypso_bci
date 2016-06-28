@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-06-28
+  task_id: MyString
+  start: false
+  end: false
+  observation: MyText
+  comment_to_day: MyText
+  user_id: 1
+
+two:
+  date: 2016-06-28
+  task_id: MyString
+  start: false
+  end: false
+  observation: MyText
+  comment_to_day: MyText
+  user_id: 1

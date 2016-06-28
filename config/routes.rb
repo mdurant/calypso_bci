@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :review_scheduled_tasks
+  resources :tasks
   #resources :deeds
   resources :profile_teams
   resources :requests

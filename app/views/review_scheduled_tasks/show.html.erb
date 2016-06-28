@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @review_scheduled_task.date %>
+</p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @review_scheduled_task.task_id %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @review_scheduled_task.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @review_scheduled_task.end %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @review_scheduled_task.observation %>
+</p>
+
+<p>
+  <strong>Comment to day:</strong>
+  <%= @review_scheduled_task.comment_to_day %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @review_scheduled_task.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_review_scheduled_task_path(@review_scheduled_task) %> |
+<%= link_to 'Back', review_scheduled_tasks_path %>

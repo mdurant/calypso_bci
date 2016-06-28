@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516104920) do
+ActiveRecord::Schema.define(version: 20160628204629) do
 
   create_table "areas", force: :cascade do |t|
     t.string   "title"
@@ -39,7 +39,19 @@ ActiveRecord::Schema.define(version: 20160516104920) do
     t.string   "description_evento"
   end
 
- 
+  create_table "hitos", force: :cascade do |t|
+    t.string   "title"
+    t.date     "date_from"
+    t.date     "date_end"
+    t.text     "benefit"
+    t.integer  "id_user"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "area_id"
+    t.string   "title_evento"
+    t.string   "description_evento"
+  end
+
   create_table "news", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -71,6 +83,27 @@ ActiveRecord::Schema.define(version: 20160516104920) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "usuario"
+  end
+
+  create_table "review_scheduled_tasks", force: :cascade do |t|
+    t.date     "date"
+    t.string   "task_id"
+    t.boolean  "start"
+    t.boolean  "end"
+    t.text     "observation"
+    t.text     "comment_to_day"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "execution_time"
+    t.string   "name"
+    t.string   "description"
+    t.string   "task_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

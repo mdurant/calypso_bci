@@ -1,0 +1,39 @@
+<%= render "home/dashboard"%>
+<div class="container">
+  <h1>Mantenedor de Tareas para Monitoreo</h1>
+    <div class="row pull-right">
+      <div class="col-md-12">
+        <a href="<%= new_task_path %>" class="btn btn-info">(+) Nueva Tarea</a>
+      </div>
+    </div>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Hora Ejecución</th>
+      <th>Nombre Tarea/Proceso</th>
+      <th>Descripción</th>
+      <th>TaskID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.execution_time %></td>
+        <td><%= task.name %></td>
+        <td><%= task.description %></td>
+        <td><%= task.task_id %></td>
+        <td>
+          <%= link_to 'Ver', task, class:"btn btn-info" %>
+          <%= link_to 'Editar', edit_task_path(task), class:"btn btn-warning" %>
+          <%= link_to 'Eliminar', task, method: :delete, data: { confirm: '¿Está seguro?' }, class:"btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+
+
