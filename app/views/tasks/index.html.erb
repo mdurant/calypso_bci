@@ -33,7 +33,11 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
+<div class="row pull-right">
+  <div class="col-md-12">
+    <%= will_paginate @tasks, renderer: BootstrapPagination::Rails %>    
+  </div>
 </div>
 
 

@@ -1,7 +1,5 @@
 <%= render "home/dashboard"%>
 <div class="container">
-  <p id="notice"><%= notice %></p>
-
 <h1>Listado Areas</h1>
 <div class="row pull-right">
   <div class="col-md-12">
@@ -39,9 +37,6 @@
     <%= will_paginate @areas, renderer: BootstrapPagination::Rails %>    
   </div>
 </div>
-
-
-<br>
 
 </div>
 

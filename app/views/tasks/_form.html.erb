@@ -1,33 +1,48 @@
-<%= form_for(@task) do |f| %>
-  <% if @task.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
-
-      <ul>
-      <% @task.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= render "layouts/menu_sin_login"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <%= form_for(@task) do |f| %>
+          <% if @task.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+            <ul>
+            <% @task.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <div class="form-group">
+        <%= f.label :execution_time, 'Hora Ejecución' %><br>
+        <%= f.text_field :execution_time, class:"form-control", placeholder:"08:00" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :name, 'Tarea/Proceso' %><br>
+        <%= f.text_field :name, class:"form-control", placeholder:"Vencimientos Swap"  %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description, 'Descripción' %><br>
+        <%= f.text_area :description, class:"form-control", placeholder: "Verificar los vencimientos SWAP" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :task_id, 'Task Id' %><br>
+        <%= f.text_field :task_id, class:"form-control", placeholder:"45678" %>
+      </div>
+      <div class="row pull-right">
+      <div class="col-md-12">
+        <div class="actions form-group">
+          <%= f.submit 'Ingresar Datos', class: "btn btn-success" %>
+        </div>
+      </div>
     </div>
-  <% end %>
+    <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div class="field">
-    <%= f.label :execution_time %><br>
-    <%= f.text_field :execution_time %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :task_id %><br>
-    <%= f.text_field :task_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+
+  
