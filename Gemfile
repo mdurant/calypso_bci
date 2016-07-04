@@ -32,12 +32,14 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'carrierwave', '~> 0.10.0'
 #Buscador Simple
-gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
+#gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 gem "polyamorous", :github => "activerecord-hackery/polyamorous"
 gem 'bootstrap-datepicker-rails'
 gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 gem 'groupdate'
+gem 'activeadmin', '~> 1.0.0.pre4'
+
 
 
 

@@ -5,7 +5,8 @@ class ReviewScheduledTasksController < ApplicationController
   # GET /review_scheduled_tasks
   # GET /review_scheduled_tasks.json
   def index
-    @review_scheduled_tasks = ReviewScheduledTask.all
+    #@review_scheduled_tasks = ReviewScheduledTask.all
+    @review_scheduled_tasks = ReviewScheduledTask.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /review_scheduled_tasks/1
@@ -26,6 +27,7 @@ class ReviewScheduledTasksController < ApplicationController
   # POST /review_scheduled_tasks.json
   def create
     @review_scheduled_task = ReviewScheduledTask.new(review_scheduled_task_params)
+    @review_scheduled_task.user_id = current_user.id
 
     respond_to do |format|
       if @review_scheduled_task.save
