@@ -38,7 +38,8 @@ gem 'bootstrap-datepicker-rails'
 gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
 gem 'groupdate'
-gem 'activeadmin', '~> 1.0.0.pre4'
+gem 'activeadmin'
+gem 'puma'
 
 
 
