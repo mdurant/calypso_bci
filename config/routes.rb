@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :profile_teams
   resources :requests
   resources :categories
-  resources :news
   #resources :hitos
   resources :deeds do
     collection do
