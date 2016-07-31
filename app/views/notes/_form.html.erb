@@ -1,0 +1,44 @@
+<%= render "layouts/menu_sin_login"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+        <%= form_for(@notes) do |f| %>
+        <% if @notes.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
+            <ul>
+            <% @note.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        
+        <div class="form-group">
+          <%= f.label :title, 'Titulo Noticia' %><br>
+          <%= f.text_field :title, class:"form-control title_bold", placeholder:"Titulo Noticia" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :content, 'Resumen' %><br>
+          <%= f.text_area :content, class:"form-control", placeholder:"Resumen Noticia" %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.label :category_id %><br>
+          <%= f.number_field :category_id %>
+        </div> 
+      
+        <div class="row pull-right">
+          <div class="col-md-12">
+            <div class="actions form-group">
+              <%= f.submit 'Ingresar Datos', class: "btn btn-success" %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

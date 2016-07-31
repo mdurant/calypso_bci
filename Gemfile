@@ -10,7 +10,7 @@ end
 group :production do
   gem 'pg'
   #Warning Heroku
-gem 'rails_12factor'
+  gem 'rails_12factor'
 
 end
 # Use SCSS for stylesheets
@@ -35,10 +35,6 @@ gem 'carrierwave', '~> 0.10.0'
 #gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 gem "polyamorous", :github => "activerecord-hackery/polyamorous"
 gem 'bootstrap-datepicker-rails'
-gem 'sunspot_rails'
-gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
-gem 'groupdate'
-gem 'activeadmin'
 gem 'puma'
 
 

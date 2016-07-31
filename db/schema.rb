@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160704022107) do
+ActiveRecord::Schema.define(version: 20160728161111) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -85,12 +85,44 @@ ActiveRecord::Schema.define(version: 20160704022107) do
     t.string   "description_evento"
   end
 
+  create_table "holas", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "information", force: :cascade do |t|
+    t.string   "title"
+    t.text     "resume"
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "news", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.string   "photo"
     t.integer  "id_user"
     t.integer  "id_category"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "noticia", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "category_id"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
