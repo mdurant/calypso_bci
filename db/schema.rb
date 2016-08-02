@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728161111) do
+ActiveRecord::Schema.define(version: 20160801025638) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -72,59 +72,10 @@ ActiveRecord::Schema.define(version: 20160728161111) do
     t.string   "description_evento"
   end
 
-  create_table "hitos", force: :cascade do |t|
-    t.string   "title"
-    t.date     "date_from"
-    t.date     "date_end"
-    t.text     "benefit"
-    t.integer  "id_user"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "area_id"
-    t.string   "title_evento"
-    t.string   "description_evento"
-  end
-
-  create_table "holas", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "information", force: :cascade do |t|
-    t.string   "title"
-    t.text     "resume"
-    t.integer  "category_id"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "news", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "photo"
-    t.integer  "id_user"
-    t.integer  "id_category"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "notes", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "category_id"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "noticia", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "category_id"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "profile_teams", force: :cascade do |t|
@@ -182,14 +133,16 @@ ActiveRecord::Schema.define(version: 20160728161111) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "username"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.string   "foto_usuario"
     t.string   "fotografia"
     t.string   "image"
   end
