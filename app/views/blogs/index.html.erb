@@ -28,7 +28,6 @@
         <td><%= blog.noticia %></td>
         <td><%= image_tag("rojo-perfil.png", class:"perfil-rojo img-responsive") %></td>
         <td><%= blog.category.title %></td>
-        <td><%= blog.user.name %></td>
         <td>
            <%= link_to 'Ver', blog , class:"btn btn-info"%>
            <%= link_to 'Editar', edit_blog_path(blog), class:"btn btn-warning" %>

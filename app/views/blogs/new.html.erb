@@ -1,5 +1,14 @@
-<h1>New Blog</h1>
+<%= render "layouts/menu_sin_login" %>
+<%= render "home/dashboard" %>
+<div class="container">
+  <h1>Nueva Noticia</h1>
+    <div class="row pull-right">
+      <div class="col-md-12">
+        <%= link_to '<< Volver', blogs_path, class: "btn btn-info" %>  
+      </div>      
+    </div>
+    <%= render 'form' %>
+</div>
+      
 
-<%= render 'form' %>
 
-<%= link_to 'Back', blogs_path %>

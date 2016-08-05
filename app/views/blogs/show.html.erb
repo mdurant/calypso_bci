@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<%= render "home/dashboard"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well fondo-form">
+         <% if notice %>
+         <p class="notice"><%= notice %></p>
+        <% elsif alert %>  
+         <p class="alert"><%= alert %></p>
+        <% end %>  
+         <h2>Se han ingresado los siguientes datos.</h2>
+         <strong>Título:</strong>
+          <%= @blog.title %>
+        <p>
+          <strong>Fecha:</strong>
+          <%= @blog.fecha.strftime("%m/%d/%Y") %>
+        </p>
+        
+        <p>
+          <strong>Noticia:</strong>
+          <%= @blog.noticia %>
+        </p>
+        
+        <p>
+          <strong>Foto:</strong>
+           <%=  image_tag  @blog.foto.url().to_s, class: "foto-reporte img-responsive" %>
+        </p>
+        
+        <p>
+          <strong>Categoria:</strong>
+          <%= @blog.category.title %>
+        </p>
+        
+        <p>
+          <strong>Usuario:</strong>
+          <%= @blog.user.username %>
+        </p>
+            <%= link_to 'Editar', edit_blog_path(@blog), class: "btn btn-warning" %> |
+        <%= link_to '<< Volver', blogs_path , class: "btn btn-info"%>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Fecha:</strong>
-  <%= @blog.fecha %>
-</p>
-
-<p>
-  <strong>Noticia:</strong>
-  <%= @blog.noticia %>
-</p>
-
-<p>
-  <strong>Foto:</strong>
-  <%= @blog.foto %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @blog.category_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @blog.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
