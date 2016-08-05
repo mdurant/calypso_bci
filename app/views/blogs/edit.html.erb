@@ -1,0 +1,17 @@
+<%= render "layouts/menu_sin_login"%>
+<%= render "home/dashboard"%>
+<div class="container top-body">
+  <h1>Editar Noticias</h1>  
+  <div class="row pull-right">
+      <div class="col-md-12">
+        <%= link_to 'Listado', @blog,  class:"btn btn-info" %>
+        <%= link_to '<< Volver', blogs_path, class:"btn btn-primary" %>
+      </div>
+  </div>
+    <%= render 'form' %>
+</div>
+
+
+
+
+

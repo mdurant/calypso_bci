@@ -1,0 +1,48 @@
+<%= render "home/dashboard"%>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h1>Listado General de Noticia</h1>
+  <div class="row pull-right">
+    <div class="col-md-12">
+      <a href="<%=  new_blog_path%>", class="btn btn-info">(+) Nueva NOTICIA </a>
+    </div>
+  </div>
+  <table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Fecha</th>
+      <th>Noticia</th>
+      <th>Foto</th>
+      <th>Categoría</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.fecha.strftime("%m/%d/%Y") %></td>
+        <td><%= blog.noticia %></td>
+        <td><%= image_tag("rojo-perfil.png", class:"perfil-rojo img-responsive") %></td>
+        <td><%= blog.category.title %></td>
+        <td><%= blog.user.name %></td>
+        <td>
+           <%= link_to 'Ver', blog , class:"btn btn-info"%>
+           <%= link_to 'Editar', edit_blog_path(blog), class:"btn btn-warning" %>
+           <%= link_to 'Eliminar', blog, method: :delete, data: { confirm: '¿Está Seguro?' }, class:"btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="row pull-right">
+  <div class="col-md-12">
+    <%= will_paginate @blogs, renderer: BootstrapPagination::Rails %>
+  </div>
+</div>
+</div>
+
+

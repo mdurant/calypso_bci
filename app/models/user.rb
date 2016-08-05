@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
   
   has_many :deeds
   has_many :requests
-  has_many :notes
+  has_many :blogs
   
 end

@@ -7,14 +7,14 @@
           <% if @deed.errors.any? %>
             <div id="error_explanation">
             <h2><%= pluralize(@deed.errors.count, "error") %> prohibited this deed from being saved:</h2>
-            <ul>
-            <% @deed.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+              <ul>
+              <% @deed.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
           <% end %>
-          </ul>
-          </div>
-          <% end %>
-        
+    
     <div class="form-group">
       <%= f.label :title, "Titulo" %><br>
       <%= f.text_field :title, class:"form-control title_bold", placeholder:"Incidencia Calypso" %>

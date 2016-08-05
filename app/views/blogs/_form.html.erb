@@ -1,0 +1,55 @@
+<%= render "layouts/menu_sin_login"%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6  col-md-offset-3">
+      <div class="well fondo-form">
+        <%= form_for(@blog) do |f| %>
+          <% if @blog.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+              <ul>
+              <% @blog.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          
+        <div class="form-group">
+        <%= f.label :title,'Titulo' %><br>
+        <%= f.text_field :title, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :fecha, 'Fecha' %><br>
+          <%= f.text_field :fecha, class: "form-control" , placeholder:"aaaa-mm-dd", id:"datepicker1" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :noticia, 'Noticia' %><br>
+          <%= f.text_area :noticia, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :foto, 'Imagen de apoyo (formatos: png, jpg, gif)' %><br>
+          <%= f.file_field :foto, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :category_id, 'Categoría' %><br>
+          <%= f.collection_select :category_id, Category.all, :id, :title, {}, {class: "form-control"} %>
+        </div>
+        
+        <div class="row pull-right">
+          <div class="col-md-12">
+            <div class="actions form-group">
+              <%= f.submit 'Ingresar Datos', class: "btn btn-success" %>
+            </div>
+          </div>
+        </div>  
+        <% end %>  
+          
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
