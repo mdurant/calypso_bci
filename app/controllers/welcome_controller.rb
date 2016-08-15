@@ -17,8 +17,13 @@ class WelcomeController < ApplicationController
   end
   
   
- 
+
+  def blogs
+  end
+  
   def noticias
+   @blogs = Blog.all()
+   @blogs = Blog.paginate(:page => params[:page], :per_page => 2)
   end
   
   def index

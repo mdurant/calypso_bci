@@ -36,7 +36,7 @@ gem 'carrierwave', '~> 0.10.0'
 gem "polyamorous", :github => "activerecord-hackery/polyamorous"
 gem 'bootstrap-datepicker-rails'
 gem 'puma'
-
+gem 'ckeditor'
 
 
 
