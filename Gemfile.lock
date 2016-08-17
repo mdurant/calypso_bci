@@ -356,7 +356,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  aws-sdk (~> 2.5.3)
+  aws-sdk (~> 2)
   binding_of_caller
   bootstrap-datepicker-rails
   bootstrap-sass (~> 3.2.0)
