@@ -1,14 +1,16 @@
 class UsersController < ApplicationController
-    
-    def show
-    @user = User.find(params[:id])
-    end
-    
-    def index 
-    #@users = User.all 
-    @users = User.paginate(:page => params[:page], :per_page => 10)
+    before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-    end
     
-    
+def show
+@user = User.find(params[:id])
+end
+
+def index 
+#@users = User.all 
+@users = User.paginate(:page => params[:page], :per_page => 10)
+
+end
+
+
 end

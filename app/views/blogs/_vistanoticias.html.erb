@@ -1,16 +1,21 @@
+<p>
+  <br>
+  <div class="container">
 <% @blogs.each do |blog| %>
   <h2><%= blog.title %></h2>
   <small><%= blog.fecha.strftime("%d/%m/%Y") %>  -  By: <%= blog.user.username %></small>
-  <div class="row">
-    <div class="col-md-9 offset-2">
-      <%=  image_tag  blog.foto.url().to_s, class: "foto-noticia img-responsive" %>
+  <div class="row-fluid">
+    <article class="col-md-9 offset-2">
+      <%=  image_tag  blog.foto.url().to_s, class: "img-responsive foto-noticia" %>
       <p>
-        <div>
+        <div class="cont-noticia">
           <%= raw blog.noticia %>
         </div>
       </p>
-    </div>
+    </article>
   </div>
+</p>
+</div>
 <% end %>
   <div class="container">
     <div class="row pull-right">

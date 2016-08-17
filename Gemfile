@@ -11,6 +11,8 @@ group :production do
   gem 'pg'
   #Warning Heroku
   gem 'rails_12factor'
+  gem 'aws-sdk', '~> 2.5.3'
+  gem 'fog'
 
 end
 # Use SCSS for stylesheets
