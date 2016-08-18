@@ -40,7 +40,7 @@ gem 'puma'
 gem 'ckeditor'
 
 gem 'aws-sdk', '~> 2'
-gem 'fog'
+gem 'fog-aws'
 
 
 
