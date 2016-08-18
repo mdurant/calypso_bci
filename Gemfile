@@ -11,8 +11,7 @@ group :production do
   gem 'pg'
   #Warning Heroku
   gem 'rails_12factor'
-  gem 'aws-sdk', '~> 2'
-  gem 'fog'
+
 
 end
 # Use SCSS for stylesheets
@@ -39,6 +38,9 @@ gem "polyamorous", :github => "activerecord-hackery/polyamorous"
 gem 'bootstrap-datepicker-rails'
 gem 'puma'
 gem 'ckeditor'
+
+gem 'aws-sdk', '~> 2'
+gem 'fog'
 
 
 
