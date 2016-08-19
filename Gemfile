@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.4"
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -39,8 +39,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'puma'
 gem 'ckeditor'
 
-gem 'aws-sdk', '~> 2'
-gem 'fog'
+gem "aws-sdk", "~> 2.3"
 
 
 
