@@ -25,13 +25,16 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'devise'
-gem 'mini_magick'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
+gem 'fog', '~> 1.37'
+gem 'fog-aws'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'chartkick'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+#gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
-gem 'carrierwave', '~> 0.10.0'
+
 #Buscador Simple
 #gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 gem "polyamorous", :github => "activerecord-hackery/polyamorous"

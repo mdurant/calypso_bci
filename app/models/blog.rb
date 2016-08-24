@@ -1,12 +1,20 @@
 class Blog < ActiveRecord::Base
     
-  validates_presence_of :title, :fecha, :noticia, :category_id,
-  
-  content_type: {content_type: ['image/jpeg','image/jpg', 'image/png', 'image/gif']},
-  size: {less_than: 2.megabytes}
+  validates_presence_of :title, :fecha, :noticia, :category_id
+  #validates_processing_of :foto,
+  validate :image_size_validation
+ 
+  mount_uploader :foto, FotoUploader
   
   belongs_to :category, foreign_key: "category_id"
   belongs_to :user, foreign_key: "user_id"
   
-  mount_uploader :foto, ImageUploader
+  
+  private
+  def image_size_validation
+    errors[:foto] << "should be less than 500KB" if foto.size > 0.5.megabytes
+  end
+  
+  
+  
 end
