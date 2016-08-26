@@ -1,9 +1,0 @@
-AWS_ACCESS_KEY_ID=AKIAJYACJMO6LNPZ65VQ
-AWS_SECRET_ACCESS_KEY=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
-AWS_BUCKET=calypso-prod
-AWS_REGION=us-west-2
-
-#FOG_DIRECTORY=bci-calypso.herokuapp.com
-
-production:
-  FOG_DIRECTORY: bci-calypso.herokuapp.com
