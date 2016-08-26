@@ -14,9 +14,10 @@ class User < ActiveRecord::Base
   has_many :requests
   has_many :blogs
   
+
   private
     def avatar_size_validation
-      errors[:avatar] << "debe ser inferior a 1000 KB" if avatar.size > 1.0.megabytes
+      errors[:image] << "debe ser inferior a 1000 KB" if image.size > 1.0.megabytes
     end
   
 end
