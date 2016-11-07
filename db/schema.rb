@@ -83,12 +83,6 @@ ActiveRecord::Schema.define(version: 20160804202046) do
     t.string   "description_evento"
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "profile_teams", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
